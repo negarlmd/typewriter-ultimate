@@ -9,7 +9,7 @@ This project is built with pure **HTML, CSS and JavaScript** without using any e
 ## 🚀 Demo
 
 🔗 **Live Demo:**  
-(https://negarlmd.github.io/typewriter-ultimate/)
+https://negarlmd.github.io/typewriter-ultimate/
 ---
 
 ## 📸 Preview
