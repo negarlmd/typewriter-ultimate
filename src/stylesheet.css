@@ -1,0 +1,104 @@
+  *,
+      *::before,
+      *::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        overflow: hidden;
+        font-family: "Courier New", monospace;
+      }
+
+      canvas {
+        position: fixed;
+        inset: 0;
+      }
+      #stars { z-index: 0; }
+      #matrix { z-index: 1; opacity: 0.25; }
+
+      .vignette {
+        position: fixed;
+        inset: 0;
+        z-index: 2;
+        pointer-events: none;
+        background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.8) 100%);
+      }
+
+      .content {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      .scanline {
+        position: fixed;
+        inset: 0;
+        z-index: 4;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+          0deg,
+          transparent 0px,
+          transparent 2px,
+          rgba(0, 255, 0, 0.03) 3px
+        );
+      }
+
+      .title {
+        color: #0f0;
+        font-size: 16px;
+        letter-spacing: 8px;
+        margin-bottom: 30px;
+        text-shadow: 0 0 10px #0f0;
+        animation: flicker 3s infinite;
+      }
+      @keyframes flicker {
+        0%, 100% { opacity: 1; }
+        92% { opacity: 1; }
+        93% { opacity: 0.4; }
+        94% { opacity: 1; }
+        96% { opacity: 0.6; }
+        97% { opacity: 1; }
+      }
+
+      h1 {
+        font-size: clamp(24px, 5vw, 60px);
+        color: #0f0;
+        min-height: 1.4em;
+        text-shadow: 0 0 10px #0f0, 0 0 30px #0f0, 0 0 60px rgba(0, 255, 0, 0.5);
+      }
+
+      .cursor {
+        display: inline-block;
+        width: 0.55em;
+        height: 1em;
+        background: #0f0;
+        vertical-align: middle;
+        box-shadow: 0 0 15px #0f0;
+        animation: blink 0.8s steps(1) infinite;
+      }
+      @keyframes blink { 50% { opacity: 0; } }
+
+      /* لرزش صفحه */
+      body.shake .content {
+        animation: shake 0.3s linear;
+      }
+      @keyframes shake {
+        0%, 100% { transform: translate(0); }
+        25% { transform: translate(-3px, 2px); }
+        50% { transform: translate(3px, -2px); }
+        75% { transform: translate(-2px, -2px); }
+      }
+
+      .hint {
+        color: rgba(0, 255, 0, 0.4);
+        font-size: 13px;
+        margin-top: 40px;
+        letter-spacing: 3px;
+      }
