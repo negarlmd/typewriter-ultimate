@@ -9,13 +9,12 @@ This project is built with pure **HTML, CSS and JavaScript** without using any e
 ## 🚀 Demo
 
 🔗 **Live Demo:**  
-https://negarlmd.github.io/typewriter-ultimate/
-
+(https://negarlmd.github.io/typewriter-ultimate/)
 ---
 
 ## 📸 Preview
 
-![Typewriter ULTIMATE Preview](./src/images/preview.png)
+![Typewriter ULTIMATE Preview](./src/img/typeWriter.png)
 
 > Put your project screenshot inside:
 >
